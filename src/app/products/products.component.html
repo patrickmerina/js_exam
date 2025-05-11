@@ -11,7 +11,9 @@
         <a>Price:{{ product.price }}</a>
         <a>Quantity: {{ product.quantity }}</a>
       </h4>
-      <button class="button-info">Add to Cart</button>
+      <button class="button-info" (click)="addToCart(product)">
+        Add to Cart
+      </button>
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 import { NgFor } from '@angular/common';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-products',
@@ -12,9 +13,19 @@ import { NgFor } from '@angular/common';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private readonly productService: ProductService,
+    private readonly cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
+    //this.add = this.productService.addToCart(id)
+    //this.remove = this.productService.removeProductToCart(id)
+    //this.update = this.productService.updateProductToCart(id, operation)
+  }
+
+  addToCart(product: Product) {
+    this.cartService.addItem(product);
   }
 }

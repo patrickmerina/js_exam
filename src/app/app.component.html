@@ -1,5 +1,8 @@
 <div class="container">
   <h4 class="title-text">My Shopping Cart</h4>
-
+  <span class="fa-stack fa-2x has-badge" [attr.data-count]="totalItems">
+    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+    <i class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
+  </span>
   <router-outlet class="router-outlet"></router-outlet>
 </div>

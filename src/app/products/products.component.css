@@ -1,6 +1,6 @@
 img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .card {
@@ -10,14 +10,6 @@ img {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
   margin: 10px;
-}
-
-.card-info-container {
-  padding: 2px 16px;
-}
-
-.products-container {
-  position: absolute;
 }
 
 /* CSS */
