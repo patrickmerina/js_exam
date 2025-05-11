@@ -1,1 +1,72 @@
-<p>cart works!</p>
+<div class="empty" *ngIf="items.length < 1">
+  <div class="info">
+    <h4>You do not have any items in your cart.</h4>
+  </div>
+</div>
+
+<div class="cart-container">
+  <ng-container *ngIf="items.length > 0">
+    <div class="cart-item" *ngFor="let item of items; let i = index">
+      <div class="imgBox">
+        <img [src]="item.imageSource" alt="" class="img" />
+      </div>
+      <div class="desc">
+        {{ item.name }}
+      </div>
+      <div class="price">
+        {{ item.price }}
+      </div>
+      <input
+        type="number"
+        class="quantity"
+        [value]="item.quantity"
+        (blur)="validateInput($event, i)"
+      />
+      <div class="subtotal">
+        {{ item.price * item.quantity }}
+      </div>
+
+      <button type="button" class="btn btn-danger" (click)="onDelete(i)">
+        Remove
+      </button>
+    </div>
+  </ng-container>
+</div>
+<div class="checkout-info">
+  <div class="label-value">Enter Promo Code</div>
+  <div class="input-group mb-3">
+    <input
+      #promoInput
+      type="text"
+      class="form-control"
+      placeholder="Promo Code"
+      aria-label="Promo Code text box"
+      aria-describedby="button-addon2"
+    />
+    <div class="input-group-append">
+      <button
+        [disabled]="disablePromoButton"
+        class="btn btn-outline-secondary"
+        type="button"
+        id="button-addon2"
+        (click)="onSubmitPromo(promoInput.value)"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div class="label-value">
+    <div>Subtotal</div>
+    <b>${{ total }}</b>
+  </div>
+  <div class="label-value discount">
+    <div>Discount</div>
+    <b>-${{ discount }}</b>
+  </div>
+  <div class="label-value">
+    <div>Total</div>
+    <b>${{ total - discount }}</b>
+  </div>
+
+  <button class="btn btn-success checkout-button">Check Out</button>
+</div>

@@ -1,6 +1,13 @@
 img {
-  max-width: 200px;
+  /* max-width: 200px;
   max-height: 200px;
+  align-self: center; */
+  max-width: 100%;
+  max-height: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* optional: keeps it looking nice */
+  align-self: center;
 }
 
 .card {
@@ -10,6 +17,13 @@ img {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
   margin: 10px;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 /* CSS */
@@ -38,4 +52,29 @@ img {
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+.products-container {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-list {
+  margin: 20px;
+  width: 50%;
+  height: 85vh;
+  justify-content: space-around;
+  overflow-y: scroll;
+  border-bottom: #ccc 1px solid;
+}
+
+.cart-section {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  height: 85vh;
+  border-left: 1px solid #ccc;
 }

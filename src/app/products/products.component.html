@@ -1,19 +1,20 @@
-<div class="row products-container">
-  <div class="col-sm-4" *ngFor="let product of products">
-    <div class="card">
-      <img [src]="product.imageSource" alt="" />
-      <div class="card-info-container"></div>
-      <h3 class="card-title">
-        {{ product.name }}
-      </h3>
-      <h4>
-        <a>Description:{{ product.desc }}</a>
-        <a>Price:{{ product.price }}</a>
-        <a>Quantity: {{ product.quantity }}</a>
-      </h4>
-      <button class="button-info" (click)="addToCart(product)">
-        Add to Cart
-      </button>
+<div class="products-container">
+  <div class="row product-list">
+    <div class="col-sm-4" *ngFor="let product of products">
+      <div class="card">
+        <img [src]="product.imageSource" alt="" />
+        <div class="card-info-container">
+          <h3 class="card-title">
+            {{ product.name }}
+          </h3>
+          <a>Description:{{ product.desc }}</a>
+          <a>Price:{{ product.price }}</a>
+        </div>
+        <button class="button-info" (click)="addToCart(product)">
+          Add to Cart
+        </button>
+      </div>
     </div>
   </div>
+  <div class="cart-section"><app-cart></app-cart></div>
 </div>
