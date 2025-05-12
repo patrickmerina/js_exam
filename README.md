@@ -1,5 +1,47 @@
 # JsTechExam
 
+Technical Interview Exam - Mini Shopping Cart | John Patrick Merina
+
+To clone:
+git clone https://github.com/patrickmerina/js_exam.git
+
+Setup/run instructions
+
+1. Install the dependencies
+   a. Install latest NodeJS https://nodejs.org/en/download
+   b. npm i install -g typescript
+   c. npm install -g @angular/cli
+   d. npm install -g json-server
+   note: you can remove -g if you intent to only use angular in the current folder.
+
+To fetch the product list from the mock API:
+npm run start:json-server
+
+2. Features implemented
+   *Angular version 19.2.11
+   *Add to cart feature
+   *Quantity adjustment
+   *Item Removal
+   *Discount Application
+   *Subtotals per item and total items
+   *Mock API from local JSON file through json-server
+   *Bootstrap 5
+
+3. Any assumptions made
+   a. Latest NodeJS Installed
+   b. VSCode Extensions
+   c. ESLint
+   d. Angular Language Service
+   e. Prettier
+   f. HTML CSS Support
+   g. SonarQube for IDE
+   h. You have Gitbash as terminal for your VSCode
+   i. Resolution = 1920 x 1080
+
+4. Time Spent - 44 hours in total
+
+=======================================================================================================
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
 ## Development server
