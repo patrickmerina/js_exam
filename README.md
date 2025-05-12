@@ -19,7 +19,7 @@ To clone:
 git clone https://github.com/patrickmerina/js_exam.git
 ```
 
-After cloning and installing dependencies, install the package by running: 
+After cloning and installing dependencies, change directory to ```js_exam``` and install the package by running: 
 
 ```bash
 npm install
