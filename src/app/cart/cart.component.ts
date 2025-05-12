@@ -13,19 +13,21 @@ export class CartComponent implements OnInit {
   items: Product[] = [];
   total: number = 0;
   discount: number = 0;
-  disablePromoButton: boolean = false;
+  promoApplied: boolean = false;
 
   constructor(private readonly cartService: CartService) {}
 
   ngOnInit(): void {
     this.cartService.cartItems.subscribe((data) => {
       this.items = data;
-
-      if (this.items) this.getTotal(this.items);
+      if (this.items) {
+        this.getTotal(this.items);
+      }
     });
   }
 
   onDelete(index: number) {
+    this.items[index].quantity = 0; // set quantity to 0
     this.items.splice(index, 1);
     this.cartService.setCartData(this.items);
 
@@ -37,14 +39,14 @@ export class CartComponent implements OnInit {
     if (quantityInput < 1) {
       event.target.value = this.items[index].quantity;
     }
-
     this.updatedQuantity(quantityInput, index);
   }
 
   private updatedQuantity(quantity: number, index: number) {
+    console.log('updatedQuantity', quantity);
     this.items[index].quantity = quantity;
     this.cartService.setCartData(this.items);
-
+    this.applyPromo();
     this.getTotal(this.items);
   }
 
@@ -54,14 +56,27 @@ export class CartComponent implements OnInit {
       subs += item.price * item.quantity;
       this.total = subs;
     }
+    this.applyPromo();
   }
 
   onSubmitPromo(promoCode: string) {
     if (promoCode === 'SAVE10') {
-      this.discount = this.total * 0.1;
-      this.disablePromoButton = true;
+      this.promoApplied = true;
+      this.applyPromo();
     } else {
+      this.removePromo();
       alert('Invalid promo code');
     }
+  }
+
+  private applyPromo() {
+    if (this.promoApplied) {
+      this.discount = Math.round(this.total * 0.1 * 100) / 100; // round to 2 decimal places
+    }
+  }
+
+  private removePromo() {
+    this.promoApplied = false;
+    this.discount = 0;
   }
 }

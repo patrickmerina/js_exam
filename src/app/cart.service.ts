@@ -32,6 +32,7 @@ export class CartService {
       this.setCartData(cache);
     } else {
       console.log('product does not exist');
+      product.quantity = 1; //set quantity to 1 upon adding to cart first time
       if (cache) {
         const newData = [...cache, product];
         this.setCartData(newData);
@@ -39,7 +40,6 @@ export class CartService {
         this.placeholder.push(product);
         this.setCartData(this.placeholder);
       }
-      product.quantity++;
     }
     this.getCartTotal();
   }

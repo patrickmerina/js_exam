@@ -27,9 +27,41 @@
   flex: 1;
 }
 
-.quantity {
+.input-quantity {
   width: 3rem;
   text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 5rem;
+  text-align: center;
+  width: fit-content;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 3rem;
+  text-align: center;
+  width: fit-content;
+  margin: 0 5px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 5rem;
+  text-align: center;
+  width: fit-content;
+  margin: 0 5px;
 }
 
 .checkout-info {

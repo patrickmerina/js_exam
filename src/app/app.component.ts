@@ -18,6 +18,5 @@ export class AppComponent {
     this.cartService.getCartTotal().subscribe((total) => {
       this.totalItems = total;
     });
-    // this.cartService.getCartData();
   }
 }

@@ -4,25 +4,30 @@
   </div>
 </div>
 
-<div class="cart-container">
-  <ng-container *ngIf="items.length > 0">
+<div class="cart-container" *ngIf="items.length > 0">
+  <ng-container>
     <div class="cart-item" *ngFor="let item of items; let i = index">
       <div class="imgBox">
-        <img [src]="item.imageSource" alt="" class="img" />
+        <img [src]="item.imageSource" [alt]="item.name" class="img" />
       </div>
       <div class="desc">
         {{ item.name }}
       </div>
       <div class="price">
+        <p>Price</p>
         {{ item.price }}
       </div>
-      <input
-        type="number"
-        class="quantity"
-        [value]="item.quantity"
-        (blur)="validateInput($event, i)"
-      />
+      <div class="quantity">
+        <p>Quantity</p>
+        <input
+          type="number"
+          class="input-quantity"
+          [value]="item.quantity"
+          (blur)="validateInput($event, i)"
+        />
+      </div>
       <div class="subtotal">
+        <p>Subtotal</p>
         {{ item.price * item.quantity }}
       </div>
 
@@ -32,7 +37,7 @@
     </div>
   </ng-container>
 </div>
-<div class="checkout-info">
+<div class="checkout-info" *ngIf="items.length > 0">
   <div class="label-value">Enter Promo Code</div>
   <div class="input-group mb-3">
     <input
@@ -45,7 +50,6 @@
     />
     <div class="input-group-append">
       <button
-        [disabled]="disablePromoButton"
         class="btn btn-outline-secondary"
         type="button"
         id="button-addon2"

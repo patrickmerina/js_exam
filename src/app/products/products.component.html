@@ -4,10 +4,15 @@
       <div class="card">
         <img [src]="product.imageSource" alt="" />
         <div class="card-info-container">
-          <h3 class="card-title">
+          <h3
+            class="card-title"
+            data-bs-toggle="tooltip"
+            [title]="product.name"
+          >
             {{ product.name }}
           </h3>
-          <a>Description:{{ product.desc }}</a>
+
+          <p class="card-description">Description: {{ product.description }}</p>
           <a>Price:{{ product.price }}</a>
         </div>
         <button class="button-info" (click)="addToCart(product)">
