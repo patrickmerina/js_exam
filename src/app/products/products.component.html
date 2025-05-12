@@ -1,0 +1,25 @@
+<div class="products-container">
+  <div class="row product-list">
+    <div class="col-sm-4" *ngFor="let product of products">
+      <div class="card">
+        <img [src]="product.imageSource" alt="" />
+        <div class="card-info-container">
+          <h3
+            class="card-title"
+            data-bs-toggle="tooltip"
+            [title]="product.name"
+          >
+            {{ product.name }}
+          </h3>
+
+          <p class="card-description">Description: {{ product.description }}</p>
+          <a>Price:{{ product.price }}</a>
+        </div>
+        <button class="button-info" (click)="addToCart(product)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-section"><app-cart></app-cart></div>
+</div>
