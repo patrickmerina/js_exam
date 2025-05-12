@@ -2,24 +2,44 @@
 
 Technical Interview Exam - Mini Shopping Cart | John Patrick Merina
 
-To clone:
-git clone https://github.com/patrickmerina/js_exam.git
-
 Setup/run instructions
 
-## A. Install the dependencies:
+## A. Installing dependencies:
 
    1. Install latest NodeJS https://nodejs.org/en/download
-   2. ```$ npm i install -g typescript```
+   2. ```$ npm install -g typescript```
    3. ```$ npm install -g @angular/cli```
    4. ```$ npm install -g json-server```
    note: you can remove -g if you intent to only use angular in the current folder.
 
-To fetch the product list from the mock API:
-```$ npm run start:json-server```
+## Development server
+
+To clone:
+```bash
+git clone https://github.com/patrickmerina/js_exam.git
+```
+
+After cloning and installing dependencies, install the package by running: 
+
+```bash
+npm install
+```
+
+To start a local development server, run:
+
+```bash
+ng serve
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+To run the JSON server for the mock API:
+```bash
+npm run start:json-server
+```
 
 
-## B. Features implemented:
+## B. Features
    * Angular version 19.2.11
    * Add to cart feature
    * Quantity adjustment
@@ -30,7 +50,7 @@ To fetch the product list from the mock API:
    * Bootstrap 5
 
 
-## C. Any assumptions made:
+## C. Assumptions
    * Latest NodeJS Installed
    * VSCode Extensions
    * ESLint
@@ -48,15 +68,7 @@ To fetch the product list from the mock API:
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
-## Development server
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
