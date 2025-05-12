@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Watch",
+      "price": 399,
+      "description": "a great product 1",
+      "quantity": 0,
+      "imageSource": "https://png.pngtree.com/png-vector/20230906/ourmid/pngtree-wristwatch-analog-classic-brown-leather-strap-watch-png-image_10001801.png"
+    },
+    {
+      "id": 2,
+      "name": "Phone",
+      "price": 499,
+      "description": "a great product 2",
+      "quantity": 0,
+      "imageSource": "https://www.apple.com/v/iphone/home/cb/images/meta/iphone__kqge21l9n26q_og.png"
+    },
+    {
+      "id": 3,
+      "name": "Laptop",
+      "price": 199,
+      "description": "a great product 3",
+      "quantity": 0,
+      "imageSource": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/surface-pro-11th-edition-color-og-twitter-image?scl=1"
+    },
+    {
+      "id": 4,
+      "name": "Headphones",
+      "price": 199,
+      "description": "a great product 4",
+      "quantity": 0,
+      "imageSource": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQTP3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=SUFReFd6NEVVOW50TTcxUzVyWlhHZ2tuVHYzMERCZURia3c5SzJFOTlPZ3oveDdpQVpwS0ltY2w2UW05aU90TzVtaW9peGdOaitwV1Nxb1VublZoTVE"
+    },
+    {
+      "id": 5,
+      "name": "Chicken Pastil",
+      "price": 20,
+      "description": "a great product 5",
+      "quantity": 0,
+      "imageSource": "https://img.lazcdn.com/g/ff/kf/S383e642af0024919adaaeb1b99e98cea2.jpg_360x360q75.jpg_.webp"
+    },
+    {
+      "id": 6,
+      "name": "Pansit Canton",
+      "price": 5,
+      "description": "a great product 6",
+      "quantity": 0,
+      "imageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRif4S9ispZdJ3NPqDUcB8so07H3AUoZUn8w&s"
+    },
+    {
+      "id": 7,
+      "name": "Gaming Mouse",
+      "price": 69,
+      "description": "a great product 7",
+      "quantity": 0,
+      "imageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqkQWNDepdDC6uXxoogRJgGPViIcYHKqlGQ&s"
+    },
+    {
+      "id": 8,
+      "name": "Mechanical Keyboard",
+      "price": 99,
+      "description": "a great product 8",
+      "quantity": 0,
+      "imageSource": "https://www.itech.ph/wp-content/uploads/2023/01/PRE-ORDER-Asus-ROG-Azoth-Gaming-Custom-Hotswappable-Mechanical-Keyboard-9-jpg.webp"
+    },
+    {
+      "id": 9,
+      "name": "Humidifier",
+      "price": 33,
+      "description": "a great product 9",
+      "quantity": 0,
+      "imageSource": "https://babymoov.ph/cdn/shop/files/A047011_HYGRO__PACKWEBUNIVERSAL01_3661276144187.jpg?v=1743040637"
+    }
+  ]
+}
